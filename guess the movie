@@ -1,0 +1,43 @@
+import random
+choose=['zid','bajrangi','race','golmal','sufna','aashqui','dil']
+def jumble(pickled_word):
+    word=random.sample(pickled_word,len(picked_word))
+    jubling="".join(word)
+    return jubling
+pp1_name=input('player 1 name')
+pp2_name=input('player 2 name')
+
+p1=0
+p2=0
+turn=0
+while(1):
+    picked_word=random.choice(choose)
+    print(picked_word)
+    jumbled_word=jumble(picked_word)
+    print(jumbled_word)
+    if turn%2==0:
+        print(pp1_name," your turn")
+        new=input('enter the word you wana guess')
+        if new==picked_word:
+            p1+=1
+            print(p1)
+        else:
+            print('sorry')
+        turn+=1
+    else:
+        print(pp2_name," your turn")
+        new=input('enter the word you wana guess')
+        if new==picked_word:
+            
+            p2+=1
+            print('point is',p2)
+        else:
+            print('sorry')
+        turn+=1
+    c=int(input('continue 0 or 1'))
+    if c==0:
+        print('point of ',pp1_name,p1)
+        print('point of ',pp2_name,p2)
+        break
+    if(c==1):
+        continue
